@@ -17,6 +17,8 @@ public class Throw_Dice : MonoBehaviour
     [SerializeField] private float yHeight = 0.5f;
     [SerializeField] private float _yIncrease = 0.6f;
     [SerializeField] private LayerMask _raycastMask;
+    public float diceCount;
+    bool checkDice = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,11 @@ public class Throw_Dice : MonoBehaviour
             fireDice = true;
             
         }
+        if(checkDice == true )
+        {
+        regularDiceCount();
+        }
+
     }
 
     
@@ -97,4 +104,22 @@ public class Throw_Dice : MonoBehaviour
         }
     }
     #endregion
+
+    void regularDiceCount()
+    {
+        if (Vector3.Dot(transform.forward, Vector3.up) > 0.6f)
+            diceCount = 1;
+        if (Vector3.Dot(-transform.forward, Vector3.up) > 0.6f)
+            diceCount = 6;
+        if (Vector3.Dot(transform.up, Vector3.up) > 0.6f)
+            diceCount = 2;
+        if (Vector3.Dot(-transform.up, Vector3.up) > 0.6f)
+            diceCount = 5;
+        if (Vector3.Dot(transform.right, Vector3.up) > 0.6f)
+            diceCount = 4;
+        if (Vector3.Dot(-transform.right, Vector3.up) > 0.6f)
+            diceCount = 3;
+        Debug.Log("diceCount :" + diceCount);
+    }
 }
+
