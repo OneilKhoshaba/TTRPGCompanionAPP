@@ -4,49 +4,97 @@ using UnityEngine;
 
 public class Throw_Dice : MonoBehaviour
 {
-    public Rigidbody rb;
+    
     public float diceForce = 5;
     public float torque;
-
-    private float currentDiceForce = 0;
-
-    private Vector2 mousePosStart, mousePosEnd;
-
-    Camera cam;
+    Vector3 mousePos = Vector3.right;
+    Vector3 previousMouse;
+    bool fireDice = false;
+    [SerializeField] int frameWait = 4;
+    private int timer = 0;
+    private Rigidbody rigidBody;
+    [SerializeField] float _raycastDistance = 500f;
+    [SerializeField] private float yHeight = 0.5f;
+    [SerializeField] private float _yIncrease = 0.6f;
+    [SerializeField] private LayerMask _raycastMask;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentDiceForce = 0;
-        mousePosStart = new Vector2(0, 0);
-        mousePosEnd = new Vector2(0, 0);
-        cam = Camera.main;
+        rigidBody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton (0))
+        if (Input.GetMouseButton(0))
         {
-            Debug.Log("Roll");
-            mousePosStart = Input.mousePosition;
-            var dicePos = cam.ScreenToViewportPoint(mousePosStart);
-            transform.position = new Vector3(mousePosStart.x, transform.localPosition.y, mousePosStart.y).normalized;
-            if (currentDiceForce < diceForce)
-                currentDiceForce++;
-            else
-                currentDiceForce = diceForce;
+            rigidBody.isKinematic = true;
+            rigidBody.velocity = Vector3.zero;
+            transform.rotation = Quaternion.LookRotation(Vector3.forward);
+            MoveDiceWithMouseVersion2();
         }
-
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            mousePosEnd = Input.mousePosition;
-            var dir = (mousePosEnd - mousePosStart).normalized;
-            rb.AddForce(new Vector3(dir.x, 0, dir.y) * currentDiceForce * diceForce);
-            rb.AddForce(transform.up * 20, ForceMode.Impulse);
-            // float turn = Input.GetAxis("Mouse X") + Input.GetAxis("Mouse Y");
-            //rb.AddTorque(transform.up * torque * turn);
-            currentDiceForce = 0;
+            fireDice = true;
+            
         }
     }
+
+    
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.position = new Vector3(0, 2, 0);
+        }
+        timer++;
+        if (timer > frameWait)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, _raycastDistance, _raycastMask))
+            {
+                previousMouse = hit.point;
+            }
+            timer = 0;
+        }
+        if (fireDice)
+        {
+            FireDice(mousePos);
+        }
+    }
+
+    #region FUNCS
+
+    void FireDice(Vector3 lastPos)
+    {
+
+        rigidBody.isKinematic = false;
+        rigidBody.angularVelocity = new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)).normalized * torque;
+
+        Vector3 direction = previousMouse - lastPos;
+        float forceAmount = direction.magnitude;
+        direction = direction.normalized;
+        direction.y += _yIncrease;
+        
+        rigidBody.AddForce(
+            direction * (forceAmount * diceForce * rigidBody.mass));
+
+        fireDice = false;
+    }
+    
+    void MoveDiceWithMouseVersion2()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, _raycastDistance, _raycastMask))
+        {
+            transform.position = new Vector3(hit.point.x, hit.point.y + yHeight, hit.point.z);
+            mousePos = hit.point;
+        }
+    }
+    #endregion
 }
