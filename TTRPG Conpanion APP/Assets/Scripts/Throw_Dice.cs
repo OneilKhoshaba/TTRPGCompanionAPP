@@ -41,10 +41,10 @@ public class Throw_Dice : MonoBehaviour
             fireDice = true;
             
         }
-        if(checkDice == true )
-        {
-        regularDiceCount();
-        }
+        //if(checkDice == true )
+        //{
+        //regularDiceCount();
+        //}
 
     }
 

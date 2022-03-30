@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402003821346069078, guid: 5ef11b98336d90444a890c739d01955f, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5402003821346069078, guid: 5ef11b98336d90444a890c739d01955f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -682,6 +682,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4736684505242452204, guid: 5ef11b98336d90444a890c739d01955f, type: 3}
   m_PrefabInstance: {fileID: 571985705}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &746929973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746929972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9307be0d509d740a3930ef033f91e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 746929974}
+  diceCount: 0
+--- !u!54 &746929974 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8060852782051526296, guid: 5ef11b98336d90444a890c739d01955f, type: 3}
+  m_PrefabInstance: {fileID: 571985705}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &746929978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1026,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322220863
 GameObject:
