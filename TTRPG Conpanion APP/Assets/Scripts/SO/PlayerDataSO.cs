@@ -10,8 +10,10 @@ public class PlayerDataSO : ScriptableObject
     public int numOfNegDice;
 
     public int posCons;
+    public int negCons;
 
     public int posDiceResult;
 
+    public int negDiceResult;
 
 }

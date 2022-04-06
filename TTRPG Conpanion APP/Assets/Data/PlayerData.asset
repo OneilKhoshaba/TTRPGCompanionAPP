@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   numOfPosDice: 3
-  numOfNutralDice: 0
-  numOfNegDice: 0
+  numOfNutralDice: 3
+  numOfNegDice: 3
+  posCons: 4
+  negCons: 5
+  posDiceResult: 0
+  negDiceResult: 0
