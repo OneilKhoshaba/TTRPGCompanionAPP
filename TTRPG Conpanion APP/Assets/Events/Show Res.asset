@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6682758cc2dd7c8419800e9a3d9017af, type: 3}
-  m_Name: PlayerData
+  m_Script: {fileID: 11500000, guid: b2bc0c6b29a59f945949b14314cb35c5, type: 3}
+  m_Name: Show Res
   m_EditorClassIdentifier: 
-  numOfPosDice: 3
-  numOfNutralDice: 3
-  numOfNegDice: 3
-  posCons: 97
-  negCons: 21
-  posDiceResult: 4
-  negDiceResult: 2

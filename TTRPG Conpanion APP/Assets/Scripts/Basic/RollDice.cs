@@ -11,6 +11,124 @@ public class RollDice : MonoBehaviour
     public int negRollAmount;
     public TMP_Text resText;
     public TMP_Text posResText;
+    public GameEvent rollDiceEvent;
+
+    public void rollDice()
+    {
+        pD.posDiceResult = 0;
+        pD.negDiceResult = 0;
+        rollDiceEvent?.Invoke();
+    }
+    public void rollPosDiceV2()
+    {
+            int diceRis = Random.Range(1, 7);
+            Debug.Log(diceRis);
+            //resText.text = diceRis.ToString();
+            if (diceRis == 1)
+            {
+                pD.posCons++;
+                posResText.text = "PC";
+            }
+            if (diceRis == 2)
+            {
+                pD.posCons++;
+                posResText.text = "PC";
+            }
+            if (diceRis == 3)
+            {
+                pD.posDiceResult++;
+                posResText.text = "1";
+            }
+            if (diceRis == 4)
+            {
+                pD.posDiceResult++;
+                posResText.text = "1";
+            }
+            if (diceRis == 5)
+            {
+                pD.posDiceResult++;
+                posResText.text = "1";
+            }
+            if (diceRis == 6)
+            {
+                pD.posDiceResult += 2;
+                posResText.text = "2";
+            }
+    }
+
+    public void rollNeutDice()
+    {
+        int diceRis = Random.Range(1, 7);
+        Debug.Log(diceRis);
+        //resText.text = diceRis.ToString();
+        if (diceRis == 1)
+        {
+            pD.negCons++;
+            posResText.text = "NC";
+        }
+        if (diceRis == 2)
+        {
+            pD.posCons++;
+            posResText.text = "PC";
+        }
+        if (diceRis == 3)
+        {
+            pD.posDiceResult++;
+            posResText.text = "1";
+        }
+        if (diceRis == 4)
+        {
+            pD.posDiceResult++;
+            posResText.text = "1";
+        }
+        if (diceRis == 5)
+        {
+            pD.negDiceResult++;
+            posResText.text = "-1";
+        }
+        if (diceRis == 6)
+        {
+            pD.negDiceResult++;
+            posResText.text = "-1";
+        }
+    }
+
+    public void rollNegDiceV2()
+    {
+        int diceRis = Random.Range(1, 7);
+        Debug.Log(diceRis);
+        //resText.text = diceRis.ToString();
+        if (diceRis == 1)
+        {
+            pD.negCons++;
+            posResText.text = "NC";
+        }
+        if (diceRis == 2)
+        {
+            pD.negCons++;
+            posResText.text = "NC";
+        }
+        if (diceRis == 3)
+        {
+            pD.negDiceResult++;
+            posResText.text = "-1";
+        }
+        if (diceRis == 4)
+        {
+            pD.negDiceResult++;
+            posResText.text = "-1";
+        }
+        if (diceRis == 5)
+        {
+            pD.negDiceResult++;
+            posResText.text = "-1";
+        }
+        if (diceRis == 6)
+        {
+            pD.negDiceResult+=2;
+            posResText.text = "-2";
+        }
+    }
 
     public void rollPosDice()
     {
