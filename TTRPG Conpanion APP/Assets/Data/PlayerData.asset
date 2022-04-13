@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6682758cc2dd7c8419800e9a3d9017af, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  numOfPosDice: 2
-  numOfNutralDice: 1
-  numOfNegDice: 2
-  posCons: 0
+  numOfPosDice: 44
+  numOfNutralDice: 0
+  numOfNegDice: 0
+  posCons: 14
   negCons: 0
-  posDiceResult: 0
+  posDiceResult: 6
   negDiceResult: 0
