@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AutoRoll.unity
+    guid: ecca5b04f13e75b4da62bee184d8d32e
   m_configObjects: {}
