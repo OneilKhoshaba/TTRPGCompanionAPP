@@ -15,4 +15,5 @@ public class sDice : MonoBehaviour
         pD.numOfPosDice++;
         Instantiate(Dice, diceContainer.transform);
     }
+
 }

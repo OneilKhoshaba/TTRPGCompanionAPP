@@ -12,13 +12,17 @@ public class RollDice : MonoBehaviour
     public TMP_Text resText;
     public TMP_Text posResText;
     public GameEvent rollDiceEvent;
+    public float diceNumber;
 
     public int diceValue;
 
+    private void Awake()
+    {
+        diceNumber = pD.numOfPosDice;
+    }
     public void rollPosDiceV2()
     {
-        if (pD.numOfPosDice >= diceValue)
-        {
+
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
             //resText.text = diceRis.ToString();
@@ -37,18 +41,19 @@ public class RollDice : MonoBehaviour
                 pD.posDiceResult += 2;
                 posResText.text = "2";
             }
-        }
-        else
-        {
-            posResText.text = "";
-        }
 
+    }
+
+    public void desPosDice()
+    {
+        if (diceNumber == pD.numOfPosDice)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void rollNeutDice()
     {
-        if (pD.numOfNutralDice >= diceValue)
-        {
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
             //resText.text = diceRis.ToString();
@@ -62,62 +67,30 @@ public class RollDice : MonoBehaviour
                 pD.posCons++;
                 posResText.text = "PC";
             }
-            if (diceRis == 3)
+            if (diceRis == 3 || diceRis == 4)
             {
                 pD.posDiceResult++;
                 posResText.text = "1";
             }
-            if (diceRis == 4)
-            {
-                pD.posDiceResult++;
-                posResText.text = "1";
-            }
-            if (diceRis == 5)
+            if (diceRis == 5 || diceRis == 6)
             {
                 pD.negDiceResult++;
                 posResText.text = "-1";
             }
-            if (diceRis == 6)
-            {
-                pD.negDiceResult++;
-                posResText.text = "-1";
-            }
-        }
-        else
-        {
-            posResText.text = "";
-        }
 
     }
 
     public void rollNegDiceV2()
     {
-        if (pD.numOfNegDice >= diceValue)
-        {
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
             //resText.text = diceRis.ToString();
-            if (diceRis == 1)
+            if (diceRis == 1 || diceRis == 2)
             {
                 pD.negCons++;
                 posResText.text = "NC";
             }
-            if (diceRis == 2)
-            {
-                pD.negCons++;
-                posResText.text = "NC";
-            }
-            if (diceRis == 3)
-            {
-                pD.negDiceResult++;
-                posResText.text = "-1";
-            }
-            if (diceRis == 4)
-            {
-                pD.negDiceResult++;
-                posResText.text = "-1";
-            }
-            if (diceRis == 5)
+            if (diceRis == 3 || diceRis == 4 || diceRis == 5)
             {
                 pD.negDiceResult++;
                 posResText.text = "-1";
@@ -127,11 +100,6 @@ public class RollDice : MonoBehaviour
                 pD.negDiceResult+=2;
                 posResText.text = "-2";
             }
-        }
-        else
-        {
-            posResText.text = "";
-        }
 
     }
 

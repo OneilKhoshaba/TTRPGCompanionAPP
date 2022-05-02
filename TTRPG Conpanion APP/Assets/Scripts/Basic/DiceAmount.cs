@@ -8,6 +8,7 @@ public class DiceAmount : MonoBehaviour
 {
     public PlayerDataSO pD;
     public TMP_Text diceNumText;
+    public GameEvent destroyPosDice;
 
 
     public void addPosDice()
@@ -18,8 +19,13 @@ public class DiceAmount : MonoBehaviour
 
     public void subPosDice()
     {
-        pD.numOfPosDice--;
-        diceNumText.text = "Pos Dice " + pD.numOfPosDice;
+        if(pD.numOfPosDice > 0)
+        {
+            destroyPosDice?.Invoke();
+            pD.numOfPosDice--;
+            diceNumText.text = "Pos Dice " + pD.numOfPosDice;
+        }
+
     }
 
     public void addNeutDice()
