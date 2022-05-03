@@ -16,4 +16,15 @@ public class PlayerDataSO : ScriptableObject
 
     public int negDiceResult;
 
+    [Space (30)]
+
+    public int psBrawl;
+    public int psRanged;
+    public int psBrawn;
+    public int psFinesse;
+    public int psIngenuity;
+    public int psMental;
+    public int psSocial;
+    public int psAwarness;
+    public int psPlotArmor;
 }
