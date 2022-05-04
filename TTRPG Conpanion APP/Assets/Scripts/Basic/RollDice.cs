@@ -16,9 +16,24 @@ public class RollDice : MonoBehaviour
 
     public int diceValue;
 
+    public enum DiceType { pos, neut, neg };
+    public DiceType dType;
     private void Awake()
     {
-        diceNumber = pD.numOfPosDice;
+        if (dType == DiceType.pos)
+        {
+            diceNumber = pD.numOfPosDice;
+        }
+
+        if (dType == DiceType.neut)
+        {
+            diceNumber = pD.numOfNutralDice;
+        }
+
+        if (dType == DiceType.neg)
+        {
+            diceNumber = pD.numOfNegDice;
+        }
     }
     public void rollPosDiceV2()
     {
@@ -80,6 +95,14 @@ public class RollDice : MonoBehaviour
 
     }
 
+    public void desNeutDice()
+    {
+        if (diceNumber == pD.numOfNutralDice)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void rollNegDiceV2()
     {
             int diceRis = Random.Range(1, 7);
@@ -101,6 +124,14 @@ public class RollDice : MonoBehaviour
                 posResText.text = "-2";
             }
 
+    }
+
+    public void desNegDice()
+    {
+        if (diceNumber == pD.numOfNegDice)
+        {
+            Destroy(gameObject);
+        }
     }
 
     //public void rollPosDice()
@@ -140,7 +171,7 @@ public class RollDice : MonoBehaviour
     //        }
     //    }
     //    posResText.text = "" + pD.posDiceResult;
-      
+
     //}
 
     //public void rollNegDice()

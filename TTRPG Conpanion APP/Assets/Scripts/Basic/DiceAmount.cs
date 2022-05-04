@@ -9,6 +9,9 @@ public class DiceAmount : MonoBehaviour
     public PlayerDataSO pD;
     public TMP_Text diceNumText;
     public GameEvent destroyPosDice;
+    public GameEvent destroyNeutDice;
+    public GameEvent destroyNegDice;
+
 
 
     public void addPosDice()
@@ -36,8 +39,13 @@ public class DiceAmount : MonoBehaviour
 
     public void subNeutDice()
     {
-        pD.numOfNutralDice--;
-        diceNumText.text = "Neutral Dice " + pD.numOfNutralDice;
+        if(pD.numOfNutralDice > 0)
+        {
+            destroyNeutDice?.Invoke();
+            pD.numOfNutralDice--;
+            diceNumText.text = "Neutral Dice " + pD.numOfNutralDice;
+        }
+
     }
 
     public void addNegDice()
@@ -48,8 +56,12 @@ public class DiceAmount : MonoBehaviour
 
     public void subNegDice()
     {
-        pD.numOfNegDice--;
-        diceNumText.text = "Neg Dice " + pD.numOfNegDice;
+        if(pD.numOfNegDice > 0)
+        {
+            destroyNegDice?.Invoke();
+            pD.numOfNegDice--;
+            diceNumText.text = "Neg Dice " + pD.numOfNegDice;
+        }
     }
 
 

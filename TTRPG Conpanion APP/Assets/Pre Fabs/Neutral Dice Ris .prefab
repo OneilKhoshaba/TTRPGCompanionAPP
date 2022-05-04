@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3246990773878885326}
   - component: {fileID: 3246990773878885327}
   - component: {fileID: 3246990773878885324}
+  - component: {fileID: 3503908802861064374}
   - component: {fileID: 3246990773878885325}
   - component: {fileID: 3246990773878885329}
   m_Layer: 5
@@ -165,6 +166,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3503908802861064374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3246990773878885323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad55abc15c4a0e46b5e05658a50b897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: d3be5624ba812aa41a5feb9a269e31e4, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3246990773878885325}
+        m_TargetAssemblyTypeName: RollDice, Assembly-CSharp
+        m_MethodName: desNeutDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3246990773878885325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +214,7 @@ MonoBehaviour:
   rollDiceEvent: {fileID: 11400000, guid: fcd19fac6e3b0bb4699b37a39dcf92c9, type: 2}
   diceNumber: 0
   diceValue: 1
+  dType: 1
 --- !u!114 &3246990773878885329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +230,5 @@ MonoBehaviour:
   pD: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
   diceNumText: {fileID: 0}
   destroyPosDice: {fileID: 0}
+  destroyNeutDice: {fileID: 0}
+  destroyNegDice: {fileID: 0}
