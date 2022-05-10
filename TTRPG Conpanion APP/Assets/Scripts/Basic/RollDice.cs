@@ -15,6 +15,17 @@ public class RollDice : MonoBehaviour
     public float diceNumber;
 
     public int diceValue;
+    [Space(30)]
+    public PlayerDataSO player1;
+    public PlayerDataSO player2;
+    public PlayerDataSO player3;
+    public PlayerDataSO player4;
+
+    public GameObject playerSheet1;
+    public GameObject playerSheet2;
+    public GameObject playerSheet3;
+    public GameObject playerSheet4;
+
 
     public enum DiceType { pos, neut, neg };
     public DiceType dType;
