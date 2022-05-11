@@ -16,7 +16,7 @@ MonoBehaviour:
   numOfNutralDice: 0
   numOfNegDice: 0
   posCons: 0
-  negCons: 0
+  negCons: 4
   posDiceResult: 0
   negDiceResult: 0
   psBrawl: 3

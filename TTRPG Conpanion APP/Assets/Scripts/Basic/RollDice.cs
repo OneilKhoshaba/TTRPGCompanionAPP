@@ -12,6 +12,7 @@ public class RollDice : MonoBehaviour
     public TMP_Text resText;
     public TMP_Text posResText;
     public GameEvent rollDiceEvent;
+    public GameEvent posConEvent;
     public float diceNumber;
 
     public int diceValue;
@@ -54,7 +55,8 @@ public class RollDice : MonoBehaviour
             //resText.text = diceRis.ToString();
             if (diceRis == 1 || diceRis == 2)
             {
-                pD.posCons++;
+                //pD.posCons++;
+                posConEvent?.Invoke();
                 posResText.text = "PC";
             }
             if (diceRis == 3 || diceRis == 4 || diceRis == 5)

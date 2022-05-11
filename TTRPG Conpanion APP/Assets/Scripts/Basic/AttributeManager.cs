@@ -76,4 +76,90 @@ public class AttributeManager : MonoBehaviour
             spawnDice?.Invoke();
         }
     }
+
+    public void IncreaseStat()
+    {
+        if (Attribue == AtType.brawl)
+        {
+            pD.psBrawl++;
+        }
+
+        if (Attribue == AtType.Ranged)
+        {
+            pD.psRanged++;
+        }
+
+        if (Attribue == AtType.Brawn)
+        {
+            pD.psBrawn++;
+        }
+
+        if (Attribue == AtType.Finesse)
+        {
+            pD.psFinesse++;
+        }
+
+        if (Attribue == AtType.Ingenunity)
+        {
+            pD.psIngenuity++;
+        }
+
+        if (Attribue == AtType.Mental)
+        {
+            pD.psMental++;
+        }
+
+        if (Attribue == AtType.Social)
+        {
+            pD.psSocial++;
+        }
+
+        if (Attribue == AtType.Awarness)
+        {
+            pD.psAwarness++;
+        }
+    }
+
+    public void DecreaseStat()
+    {
+        if (Attribue == AtType.brawl)
+        {
+            pD.psBrawl--;
+        }
+
+        if (Attribue == AtType.Ranged)
+        {
+            pD.psRanged--;
+        }
+
+        if (Attribue == AtType.Brawn)
+        {
+            pD.psBrawn--;
+        }
+
+        if (Attribue == AtType.Finesse)
+        {
+            pD.psFinesse--;
+        }
+
+        if (Attribue == AtType.Ingenunity)
+        {
+            pD.psIngenuity--;
+        }
+
+        if (Attribue == AtType.Mental)
+        {
+            pD.psMental--;
+        }
+
+        if (Attribue == AtType.Social)
+        {
+            pD.psSocial--;
+        }
+
+        if (Attribue == AtType.Awarness)
+        {
+            pD.psAwarness--;
+        }
+    }
 }

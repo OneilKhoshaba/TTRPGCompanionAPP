@@ -212,12 +212,17 @@ MonoBehaviour:
   resText: {fileID: 5574279695755837768}
   posResText: {fileID: 5574279695755837768}
   rollDiceEvent: {fileID: 11400000, guid: fcd19fac6e3b0bb4699b37a39dcf92c9, type: 2}
+  posConEvent: {fileID: 11400000, guid: 61bedfd0c3ac2424cb2c170aa4739148, type: 2}
   diceNumber: 0
   diceValue: 1
   player1: {fileID: 11400000, guid: f684901ef1cafbd408f8ab4d0f6eb142, type: 2}
   player2: {fileID: 11400000, guid: 3a171fb5dfeefb54a8b219239c49ad0d, type: 2}
   player3: {fileID: 11400000, guid: d10164a152c80bd4f9ad0a426660e5be, type: 2}
   player4: {fileID: 11400000, guid: f4e32c983aca1ba49a246537a3eb0a51, type: 2}
+  playerSheet1: {fileID: 0}
+  playerSheet2: {fileID: 0}
+  playerSheet3: {fileID: 0}
+  playerSheet4: {fileID: 0}
   dType: 0
 --- !u!114 &501553612198465990
 MonoBehaviour:
