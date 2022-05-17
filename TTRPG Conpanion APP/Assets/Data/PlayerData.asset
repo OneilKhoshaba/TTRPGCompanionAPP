@@ -16,15 +16,15 @@ MonoBehaviour:
   numOfNutralDice: 0
   numOfNegDice: 0
   posCons: 0
-  negCons: 4
+  negCons: 0
   posDiceResult: 0
   negDiceResult: 0
-  psBrawl: 3
-  psRanged: 1
-  psBrawn: 3
-  psFinesse: 1
-  psIngenuity: 1
-  psMental: 1
-  psSocial: 2
-  psAwarness: 2
+  psBrawl: 0
+  psRanged: 0
+  psBrawn: 0
+  psFinesse: 0
+  psIngenuity: 0
+  psMental: 0
+  psSocial: 0
+  psAwarness: 0
   psPlotArmor: 0
