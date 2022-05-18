@@ -19,7 +19,7 @@ MonoBehaviour:
   negCons: 0
   posDiceResult: 0
   negDiceResult: 0
-  psBrawl: 0
+  psBrawl: 3
   psRanged: 0
   psBrawn: 0
   psFinesse: 0

@@ -5,6 +5,7 @@ using TMPro;
 
 public class AttributeManager : MonoBehaviour
 {
+    public PlayerDataSO posDice;
     public PlayerDataSO pD;
     public TMP_Text atDisplay;
     public GameEvent spawnDice;
@@ -71,6 +72,7 @@ public class AttributeManager : MonoBehaviour
 
     public void addAtDice()
     {
+        posDice.numOfPosDice = 0;
         for(int i = 0; i < atValue; i++)
         {
             spawnDice?.Invoke();
