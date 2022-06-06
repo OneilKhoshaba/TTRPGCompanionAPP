@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7847014333392083662}
   - component: {fileID: 8361078207486305308}
   - component: {fileID: 8361078207486305312}
+  - component: {fileID: -3985621588684030732}
   m_Layer: 5
   m_Name: Neg Dice Ris
   m_TagString: Untagged
@@ -212,8 +213,17 @@ MonoBehaviour:
   resText: {fileID: 8361078207486305310}
   posResText: {fileID: 8361078207486305310}
   rollDiceEvent: {fileID: 11400000, guid: fcd19fac6e3b0bb4699b37a39dcf92c9, type: 2}
+  posConEvent: {fileID: 0}
   diceNumber: 0
   diceValue: 1
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  player3: {fileID: 0}
+  player4: {fileID: 0}
+  playerSheet1: {fileID: 0}
+  playerSheet2: {fileID: 0}
+  playerSheet3: {fileID: 0}
+  playerSheet4: {fileID: 0}
   dType: 2
 --- !u!114 &8361078207486305312
 MonoBehaviour:
@@ -232,3 +242,31 @@ MonoBehaviour:
   destroyPosDice: {fileID: 11400000, guid: 25f9c9ee52c229a4bbd8b75b2d5277a7, type: 2}
   destroyNeutDice: {fileID: 11400000, guid: d3be5624ba812aa41a5feb9a269e31e4, type: 2}
   destroyNegDice: {fileID: 11400000, guid: 834aa84e27f2a524aa5c5113c72cb8fa, type: 2}
+--- !u!114 &-3985621588684030732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361078207486305306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad55abc15c4a0e46b5e05658a50b897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b982427dd0bb7ba46a6d93b02620d23b, type: 2}
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8361078207486305308}
+        m_TargetAssemblyTypeName: RollDice, Assembly-CSharp
+        m_MethodName: clearDice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

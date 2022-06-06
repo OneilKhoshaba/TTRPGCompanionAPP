@@ -5,10 +5,10 @@ using TMPro;
 
 public class ResManager : MonoBehaviour
 {
-    public PlayerDataSO player1;
-    public PlayerDataSO player2;
-    public PlayerDataSO player3;
-    public PlayerDataSO player4;
+    public CharacterDataSO player1;
+    public CharacterDataSO player2;
+    public CharacterDataSO player3;
+    public CharacterDataSO player4;
     [Space(30)]
     public GameObject playerSheet1;
     public GameObject playerSheet2;
@@ -27,34 +27,34 @@ public class ResManager : MonoBehaviour
     {
         if(playerSheet1.activeInHierarchy == true)
         {
-            if(player1.posCons < 5)
+            if(player1.psPlotArmor < 5)
             {
-                player1.posCons++;
+                player1.psPlotArmor++;
             }
             
         }
 
         if (playerSheet2.activeInHierarchy == true)
         {
-            if (player2.posCons < 5)
+            if (player2.psPlotArmor < 5)
             {
-                player2.posCons++;
+                player2.psPlotArmor++;
             }
         }
 
         if (playerSheet3.activeInHierarchy == true)
         {
-            if (player3.posCons < 5)
+            if (player3.psPlotArmor < 5)
             {
-                player3.posCons++;
+                player3.psPlotArmor++;
             }
         }
 
         if (playerSheet4.activeInHierarchy == true)
         {
-            if (player4.posCons < 5)
+            if (player4.psPlotArmor < 5)
             {
-                player4.posCons++;
+                player4.psPlotArmor++;
             }
         }
     }

@@ -6,6 +6,7 @@ public class InvokeRoll : MonoBehaviour
 {
     public GameEvent rollDiceEvent;
     public GameEvent setRes;
+    public GameEvent clearDiceEvent;
     public PlayerDataSO pD;
 
     public void rollDice()
@@ -14,5 +15,12 @@ public class InvokeRoll : MonoBehaviour
         pD.negDiceResult = 0;
         rollDiceEvent?.Invoke();
         setRes?.Invoke();
+    }
+
+    public void clearDice()
+    {
+        clearDiceEvent?.Invoke();
+        pD.numOfNegDice = 0;
+        pD.numOfPosDice = 0;
     }
 }

@@ -6,7 +6,7 @@ using TMPro;
 public class PlotArmour : MonoBehaviour
 {
 
-    public PlayerDataSO pD;
+    public CharacterDataSO pD;
     public TMP_Text plotArmourText;
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,6 @@ public class PlotArmour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        plotArmourText.text = "Plot Armour: " + pD.posCons;
+        plotArmourText.text = "Plot Armour: " + pD.psPlotArmor;
     }
 }

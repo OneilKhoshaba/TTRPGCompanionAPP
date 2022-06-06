@@ -79,6 +79,11 @@ public class RollDice : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void clearDice()
+    {
+        Destroy(gameObject);
+    }
+
 
     public void rollNeutDice()
     {

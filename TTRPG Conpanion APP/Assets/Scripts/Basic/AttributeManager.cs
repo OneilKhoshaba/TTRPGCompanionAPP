@@ -6,7 +6,7 @@ using TMPro;
 public class AttributeManager : MonoBehaviour
 {
     public PlayerDataSO posDice;
-    public PlayerDataSO pD;
+    public CharacterDataSO pD;
     public TMP_Text atDisplay;
     public GameEvent spawnDice;
     public enum AtType { brawl, Ranged, Brawn, Finesse, Ingenunity, Mental, Social, Awarness};
@@ -77,6 +77,11 @@ public class AttributeManager : MonoBehaviour
         {
             spawnDice?.Invoke();
         }
+    }
+
+    public void subPlotArmour()
+    {
+        pD.psPlotArmor--;
     }
 
     public void IncreaseStat()
