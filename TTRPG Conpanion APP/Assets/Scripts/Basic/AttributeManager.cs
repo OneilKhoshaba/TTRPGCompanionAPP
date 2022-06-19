@@ -14,9 +14,9 @@ public class AttributeManager : MonoBehaviour
 
     public int atValue;
 
-    void Start()
+    void Awake()
     {
-        
+        pD = Resources.Load<CharacterDataSO>("Data/Player");
     }
 
     void Update()
