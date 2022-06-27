@@ -9,11 +9,27 @@ public class sDice : MonoBehaviour
     public GameObject diceContainer;
     public PlayerDataSO pD;
     public TMP_Text diceNumText;
+    public enum diceType { pos, neut, neg};
+    public diceType dice;
 
     public void Update()
     {
-        diceNumText.text = "Pos Dice " + pD.numOfPosDice;
-        diceNumText.text = "Neg Dice " + pD.numOfNegDice;
+        if(dice == diceType.pos)
+        {
+            diceNumText.text = "Pos Dice " + pD.numOfPosDice;
+        }
+
+        if (dice == diceType.neut)
+        {
+            diceNumText.text = "Neut Dice " + pD.numOfNutralDice;
+        }
+
+        if (dice == diceType.neg)
+        {
+            diceNumText.text = "Neg Dice " + pD.numOfNegDice;
+        }
+
+
     }
 
     public void spawnDice()

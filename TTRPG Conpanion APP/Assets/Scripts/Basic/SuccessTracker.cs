@@ -18,8 +18,8 @@ public class SuccessTracker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        posTotal.text = "Total Success: " + pD.posDiceResult;
-        negTotal.text = "Total Failure: " + pD.negDiceResult;
+        //posTotal.text = "Total Success: " + pD.posDiceResult;
+        //negTotal.text = "Total Failure: " + pD.negDiceResult;
 
         int finalRes = pD.posDiceResult - pD.negDiceResult;
         if(finalRes > 2)

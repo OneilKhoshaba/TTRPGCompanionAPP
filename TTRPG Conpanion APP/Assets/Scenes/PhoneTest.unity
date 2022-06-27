@@ -970,8 +970,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 130
+  m_fontSizeBase: 130
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -1581,7 +1581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00067139, y: 168}
+  m_AnchoredPosition: {x: 0.0006713867, y: 168}
   m_SizeDelta: {x: -0.0010986, y: -2985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190689076
@@ -3142,6 +3142,7 @@ MonoBehaviour:
   diceContainer: {fileID: 336158655}
   pD: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
   diceNumText: {fileID: 741639187}
+  dice: 0
 --- !u!114 &336158661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4008,8 +4009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 1543607228}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 4
@@ -4432,8 +4433,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 467433151}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 2
@@ -4740,8 +4741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 1463753025}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 7
@@ -5030,8 +5031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 1086204413}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 6
@@ -5827,7 +5828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &692357862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6136,6 +6137,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1932705521}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &733920231
 MonoBehaviour:
@@ -6631,8 +6644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 675, y: -1138}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0.00061035, y: -1533}
+  m_SizeDelta: {x: 665.475, y: 255.9768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839219907
 MonoBehaviour:
@@ -6922,7 +6935,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1932705521}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 692357861}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8419,8 +8444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 2144636755}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 1
@@ -8977,8 +9002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 1500410034}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 3
@@ -10357,6 +10382,7 @@ MonoBehaviour:
   diceContainer: {fileID: 1478722610}
   pD: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
   diceNumText: {fileID: 1784977353}
+  dice: 1
 --- !u!114 &1478722615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10532,8 +10558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 153199411}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 0
@@ -11696,6 +11722,7 @@ MonoBehaviour:
   diceContainer: {fileID: 1678516162}
   pD: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
   diceNumText: {fileID: 1561087561}
+  dice: 2
 --- !u!114 &1678516167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12138,8 +12165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ec973823728f144aaaa3256e1bb3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posDice: {fileID: 0}
-  pD: {fileID: 0}
+  posDice: {fileID: 11400000, guid: aad333ee330eb56449b9c6d1ae24eaab, type: 2}
+  pD: {fileID: 11400000, guid: bc6d2a454c9f9284091b4a0ad421be61, type: 2}
   atDisplay: {fileID: 1535293123}
   spawnDice: {fileID: 11400000, guid: 492249563fb5fe3488061fd2257855b5, type: 2}
   Attribue: 5
@@ -12488,7 +12515,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1783163176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12538,7 +12565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1783163175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c5285f52be3a064693275e17abd9f3e, type: 3}
   m_Name: 
@@ -12587,7 +12614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960, y: -57.044}
+  m_AnchoredPosition: {x: 960, y: -57.043945}
   m_SizeDelta: {x: 796.8643, y: 114.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784977353
@@ -13713,7 +13740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1932705522
 MonoBehaviour:
   m_ObjectHideFlags: 0
