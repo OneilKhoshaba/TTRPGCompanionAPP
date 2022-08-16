@@ -52,19 +52,12 @@ public class RollDice : MonoBehaviour
 
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
-            //resText.text = diceRis.ToString();
-            if (diceRis == 1 || diceRis == 2)
-            {
-                //pD.posCons++;
-                posConEvent?.Invoke();
-                posResText.text = "PC";
-            }
-            if (diceRis == 3 || diceRis == 4 || diceRis == 5)
+            if (diceRis == 1 || diceRis == 2 || diceRis == 3)
             {
                 pD.posDiceResult++;
                 posResText.text = "1";
             }
-            if (diceRis == 6)
+            if (diceRis == 6 || diceRis == 5 || diceRis == 4 )
             {
                 pD.posDiceResult += 2;
                 posResText.text = "2";
@@ -90,25 +83,20 @@ public class RollDice : MonoBehaviour
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
             //resText.text = diceRis.ToString();
-            if (diceRis == 1)
-            {
-                pD.negCons++;
-                posResText.text = "NC";
-            }
-            if (diceRis == 2)
-            {
-                pD.posCons++;
-                posResText.text = "PC";
-            }
-            if (diceRis == 3 || diceRis == 4)
-            {
-                pD.posDiceResult++;
-                posResText.text = "1";
-            }
-            if (diceRis == 5 || diceRis == 6)
+            if (diceRis == 1 || diceRis == 2)
             {
                 pD.negDiceResult++;
                 posResText.text = "-1";
+            }
+            if (diceRis == 3 || diceRis == 4)
+            {
+                pD.posCons++;
+                posResText.text = "FallOut";
+            }
+            if (diceRis == 5 || diceRis == 6)
+            {
+                pD.posDiceResult++;
+                posResText.text = "1";
             }
 
     }
@@ -125,18 +113,13 @@ public class RollDice : MonoBehaviour
     {
             int diceRis = Random.Range(1, 7);
             Debug.Log(diceRis);
-            //resText.text = diceRis.ToString();
-            if (diceRis == 1 || diceRis == 2)
-            {
-                pD.negCons++;
-                posResText.text = "NC";
-            }
-            if (diceRis == 3 || diceRis == 4 || diceRis == 5)
+
+            if (diceRis == 3 || diceRis == 1 || diceRis == 2)
             {
                 pD.negDiceResult++;
                 posResText.text = "-1";
             }
-            if (diceRis == 6)
+            if (diceRis == 6 || diceRis == 4 || diceRis == 5)
             {
                 pD.negDiceResult+=2;
                 posResText.text = "-2";

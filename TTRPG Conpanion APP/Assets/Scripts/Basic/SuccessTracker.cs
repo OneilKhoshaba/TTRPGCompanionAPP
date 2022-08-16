@@ -22,12 +22,12 @@ public class SuccessTracker : MonoBehaviour
         //negTotal.text = "Total Failure: " + pD.negDiceResult;
 
         int finalRes = pD.posDiceResult - pD.negDiceResult;
-        if(finalRes > 2)
+        if(finalRes > 4)
         {
             s.SetActive(false);
         }
 
-        if (finalRes == 1 || finalRes == 2)
+        if (finalRes > 0 && finalRes < 5)
         {
             a.SetActive(false);
         }
@@ -37,12 +37,12 @@ public class SuccessTracker : MonoBehaviour
             n.SetActive(false);
         }
 
-        if (finalRes == -1 || finalRes == -2)
+        if (finalRes < 0 && finalRes > -5)
         {
             d.SetActive(false);
         }
 
-        if (finalRes <= -3)
+        if (finalRes <= -5)
         {
             f.SetActive(false);
         }
